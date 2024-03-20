@@ -14,6 +14,7 @@ import MobileMenu from "../src/layout/MobileMenu";
 import Mouse from "../src/layout/Mouse";
 import PogressBar from "../src/layout/PogressBar";
 import { activeSkillProgress } from "../src/utilits";
+import DataState from "../src/context/dataState";
 const Portfolio = dynamic(() => import("../src/components/Portfolio"), {
   ssr: false,
 });
@@ -24,6 +25,7 @@ const IndexGlitch = () => {
 
   return (
     <Layout>
+      <DataState>
       <MobileMenu />
       <Header />
       <HomeGlitch />
@@ -54,6 +56,7 @@ const IndexGlitch = () => {
       <Contact />
       <Mouse />
       <PogressBar />
+      </DataState>
     </Layout>
   );
 };
