@@ -7,14 +7,14 @@ import ProjectPopup from "./popup/ProjectPopup";
 const Portfolio = () => {
   const [activeDetailsPopup, setActiveDetailsPopup] = useState(false);
   // Isotope
-  useEffect(() => {
-    dataImage();
-    setTimeout(() => {
-      new Isotope(".gallery_zoom", {
-        itemSelector: ".grid-item",
-      });
-    }, 500);
-  }, []);
+  // useEffect(() => {
+  //   dataImage();
+  //   setTimeout(() => {
+  //     new Isotope(".gallery_zoom", {
+  //       itemSelector: ".grid-item",
+  //     });
+  //   }, 500);
+  // }, []);
 
 
     //destructuring of objects which came from the dataState file in context folder
