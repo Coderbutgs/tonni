@@ -70,14 +70,19 @@ const Portfolio = () => {
                     return(
                       <>
                         <li className="grid-item" key = {project && project._id}>
-                        <div className="list_inner">
+                        <div className="list_inner" style = {{zIndex:"0"}}>
                           <div className="image" >
                             <img src={project && project.image && project.image.url} alt="photo" style = {{opacity:1}}/>
                             
                           </div>
                           <div className="details">
                             <span className="category">{project && project.sequence}</span>
-                            <h3 className="title">{project && project.title}</h3>
+                            <div style = {{marginLeft:"80%",display:"flex",gap:"30%"}}>
+                              <img src = "img/svg/github.svg" className = "git-live-icons"alt = "Github" style ={{height:"25px"}}>
+                              </img>
+                              <img src = "img/svg/live2.svg" className="git-live-icons" style = {{height:"30px"}}></img>
+                            </div>
+                            <h3 className="title" style = {{marginTop:"5%"}}>{project && project.title}</h3>
                             <img className="svg" src="img/svg/vector5.svg" alt="" />
                     
                           </div>

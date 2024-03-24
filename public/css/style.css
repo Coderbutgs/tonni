@@ -1163,6 +1163,7 @@ h6 {
   text-transform: uppercase;
   margin-bottom: 5px;
   position: relative;
+  float:left;
 }
 .tonni_tm_portfolio .portfolio_list .details .category:before {
   position: absolute;
@@ -1211,6 +1212,9 @@ h6 {
 }
 .tonni_tm_portfolio .list_inner:hover .details .svg {
   opacity: 1;
+}
+.git-live-icons:hover{
+  opacity: .5;
 }
 .tonni_tm_full_link {
   position: absolute;
