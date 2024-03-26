@@ -1499,6 +1499,21 @@ h6 {
   background-position: center;
   border-radius: 12px;
 }
+.popup_techStack_list{
+  list-style-type:none;
+  width:35vw;
+  height:35px;
+  margin-left:-16px;
+  float:left
+}
+.popup_social_list{
+  list-style-type:none;
+  width:10vw;
+  height:35px;
+  margin-left:80%;
+  display:flex;
+  gap:30px
+}
 
 /*---------------------------------------------------*/
 /*	08) TONNI TIMELINE
@@ -3817,5 +3832,21 @@ h6 {
   }
   .tonni_tm_hero .content_in{
     top:30%;
+  }
+  .popup_techStack_list{
+    list-style-type: none;
+    width: 53vw;
+    height: 35px;
+    margin-left: -16px;
+    float: left;
+    font-size: 12px;
+  }
+  .popup_social_list{
+    list-style-type: none;
+    width: 17vw;
+    height: 35px;
+    margin-left: 80%;
+    display: flex;
+    gap: 10px;
   }
 }

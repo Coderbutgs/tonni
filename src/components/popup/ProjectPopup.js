@@ -25,7 +25,7 @@ const ProjectPopup = ({ show, close, blogData }) => {
             </div>
             <div className="details">
               <div className="title">
-                    <ul style = {{listStyleType:"none",width:"35vw",height:"35px",marginLeft:"-16px",float:"left"}}>
+                    <ul  className = "popup_techStack_list">
                         {blogData && blogData.techStack.map(tech=>{
                             return(
                             <>
@@ -35,7 +35,7 @@ const ProjectPopup = ({ show, close, blogData }) => {
                             </>)
                         })}
                     </ul>
-                    <ul style = {{listStyleType:"none",width:"10vw",height:"35px",marginLeft:"80%",display:"flex",gap:"30px"}}>
+                    <ul className = "popup_social_list">
                       <li style = {{float:"left"}}>
                       <a href = {blogData && blogData.githuburl}>
                       <img src = "img/svg/github.svg" className = "git-live-icons"alt = "Github" style ={{height:"25px"}}/>
