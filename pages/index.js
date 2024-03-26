@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import About from "../src/components/About";
 import Contact from "../src/components/Contact";
 import Home from "../src/components/Home";
-import News from "../src/components/News";
+import Projects from "../src/components/Projects";
 import Priceing from "../src/components/Priceing";
 import Service from "../src/components/Service";
 import Testimonials from "../src/components/Testimonials";
@@ -50,8 +50,8 @@ const Index = () => {
       <Testimonials />
 
       {/* /TESTIMONIALS */}
-      {/* NEWS */}
-      <News />
+      {/* PROJECTS */}
+      <Projects />
       {/* /NEWS */}
       {/* CONTACT */}
       <Contact />

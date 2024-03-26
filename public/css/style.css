@@ -1193,6 +1193,9 @@ h6 {
 .tonni_tm_portfolio .list_inner:hover .category:after {
   width: 40px;
 }
+
+
+
 .tonni_tm_portfolio .portfolio_list .details .title {
   font-size: 20px;
 }
@@ -1213,6 +1216,8 @@ h6 {
 .tonni_tm_portfolio .list_inner:hover .details .svg {
   opacity: 1;
 }
+
+
 .git-live-icons:hover{
   opacity: .5;
 }
@@ -2456,6 +2461,63 @@ h6 {
   width: 75px;
   height: 75px;
   color: transparent;
+}
+
+.tonni_tm_news .list_inner .details .category {
+  display: inline-block;
+  font-family: var(--font-family-extra);
+  font-weight: 700;
+  color: var(--extra-color);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  position: relative;
+  float:left;
+}
+.tonni_tm_news .list_inner .details .category:before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  left: -50px;
+  bottom: 10px;
+}
+.tonni_tm_news .list_inner .details .category:after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 2px;
+  background-color: var(--extra-color);
+  left: -50px;
+  bottom: 10px;
+  z-index: 1;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tonni_tm_news .list_inner:hover .category:after {
+  width: 40px;
+}
+
+.tonni_tm_news .list_inner .details .svg{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  opacity: 0.1;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tonni_tm_news .list_inner:hover .details .svg {
+  opacity: 1;
 }
 
 /*---------------------------------------------------*/
