@@ -72,7 +72,7 @@ const Projects = () => {
         show={activeBlog}
         blogData={activeBlogData}
       />
-      <div className="tonni_tm_section" id="news">
+      <div className="tonni_tm_section" id="projects">
         <div className="tonni_tm_news">
           <div className="container bigger">
             <div className="news_inner">

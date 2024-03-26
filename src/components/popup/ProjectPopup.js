@@ -37,13 +37,13 @@ const ProjectPopup = ({ show, close, blogData }) => {
                     </ul>
                     <ul className = "popup_social_list">
                       <li style = {{float:"left"}}>
-                      <a href = {blogData && blogData.githuburl}>
+                      <a href = {blogData && blogData.githuburl} target = "_blank" rel = "noreferrer">
                       <img src = "img/svg/github.svg" className = "git-live-icons"alt = "Github" style ={{height:"25px"}}/>
                       </a>
                       
                       </li>
                       <li style = {{float:"left"}}>
-                      <a href = {blogData && blogData.liveurl}>
+                      <a href = {blogData && blogData.liveurl} target="_blank" rel = "noreferrer">
                       <img src = "img/svg/live2.svg" className="git-live-icons" style = {{height:"30px",marginTop:"5px"}}/>
                       </a>
                     
