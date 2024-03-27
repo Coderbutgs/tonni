@@ -3885,21 +3885,31 @@ h6 {
   .tonni_tm_hero .content_in{
     top:30%;
   }
+
+  .news_popup_informations .details .title{
+    display:flex;
+    flex-direction: row;
+    gap:10%;
+  }
+
   .popup_techStack_list{
     list-style-type: none;
     width: 53vw;
-    height: 35px;
+    height: max-content;
     margin-left: -16px;
     float: left;
     font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .popup_social_list{
     list-style-type: none;
     width: 17vw;
     height: 35px;
-    margin-left: 80%;
     display: flex;
-    gap: 10px;
+    gap: 15%;
+    margin-left:0
   }
   .tonni_tm_portfolio .filters{
     flex-direction: column;

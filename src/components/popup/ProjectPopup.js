@@ -49,8 +49,9 @@ const ProjectPopup = ({ show, close, blogData }) => {
                     
                       </li>
                     </ul>
-                <h3>{blogData && blogData.title}</h3>
+                
               </div>
+              <h3>{blogData && blogData.title}</h3>
             </div>
             <div className="text">
               <p>{blogData && blogData.description}</p>
