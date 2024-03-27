@@ -6,15 +6,6 @@ import DetailsPopup from "./popup/DetailsPopup";
 import ProjectPopup from "./popup/ProjectPopup";
 const Portfolio = () => {
   const [activeDetailsPopup, setActiveDetailsPopup] = useState(false);
-  // Isotope
-  // useEffect(() => {
-  //   dataImage();
-  //   setTimeout(() => {
-  //     new Isotope(".gallery_zoom", {
-  //       itemSelector: ".grid-item",
-  //     });
-  //   }, 500);
-  // }, []);
 
 
     //destructuring of objects which came from the dataState file in context folder
@@ -22,7 +13,7 @@ const Portfolio = () => {
 
     //Using the getData function declared in dataState.js to fetch the data from the API
     useEffect(()=>{
-      getData();
+      getData();      
     },[]);
 
     //Sorting the fetched data on the basis of sequence
@@ -33,10 +24,56 @@ const Portfolio = () => {
     const fData = [].concat(myData)
     .filter(data => data && data.enabled === true);
 
+  
       
     const [activeBlogData, setActiveBlogData] = useState();
     const [activeBlog, setActiveBlog] = useState(false);
 
+    //Get the names of all the tech in the techStack field and store it in the array "filter"
+    let filter = []
+    fData.map(project=>{
+      project && project.techStack.map(tech=>{
+        tech = tech.trim();
+        if(!filter.includes(tech)){
+          filter.push(tech);
+        }
+      })
+    })
+
+    const [selectedFilters,setSelectedFilters] = useState([])
+    const [filteredItems, setFilteredItems] = useState([]);
+
+    //sets the initialvalue of filteredItems
+    useEffect(()=>{
+      setFilteredItems(fData);
+    },[data])
+    
+    //Handles the function when any filter is clicked
+    const handleFilterButtonClick = (selectedCategory) => {
+      if (selectedFilters.includes(selectedCategory)) {
+        let filters = selectedFilters.filter((el) => el !== selectedCategory);
+        setSelectedFilters(filters);
+      } else {
+        setSelectedFilters([...selectedFilters, selectedCategory]);
+      }
+    };
+    
+    //Processes the filteritems() function whenever there is a change in the current list of applied filters.
+    useEffect(() => {
+      filterItems();
+    }, [selectedFilters]);
+  
+    const filterItems = () => {
+      if (selectedFilters.length > 0) {
+          selectedFilters.map((selectedCategory) => {
+          let temp = filteredItems.filter((project) => project && project.techStack.some((tech) => tech.trim() === selectedCategory));
+          setFilteredItems(temp);
+        });
+      } else {
+        setFilteredItems(fData);
+      }
+    };
+    
 
   return (
     <Fragment>
@@ -56,17 +93,33 @@ const Portfolio = () => {
               <div className="title">
                   <h3>Latest Projects</h3> 
               </div>
-              <div className="subtitle">
-                <p>
-                  
-                </p>
-              </div>
             </div>
+            <div className = "filters" data-type="centered">
+              <div className = "filters_title">
+                <span>Filters</span>
+                <img src = "img/svg/filter.svg" className = "filters_img"></img>
+              </div>
+              <ul className = "filters_list">
+                {filter.map((tech,index)=>{
+                  return(
+                      <li  onClick={() => handleFilterButtonClick(tech)}
+                      className={`list ${
+                        selectedFilters?.includes(tech) ? "active" : ""
+                      }`} key = {index}>
+                          <div className = "list_name">
+                              {tech}
+                          </div>
+                      </li>
+                )
+                })}
+              </ul>
+            </div>
+    
             <div className="portfolio_list wow fadeInUp" data-wow-duration="1s">
               <ul className="gallery_zoom grid">
                 {/* <li className = "grid-sizer" /> */}
                   {/* mapping the sorted and filtered data to be used dynamically */}
-                  {fData.map(project=>{
+                  {filteredItems.map(project=>{
                     return(
                       <>
                         <li className="grid-item" key = {project && project._id}>

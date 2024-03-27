@@ -21,7 +21,6 @@ const Testimonials = () => {
 
     useEffect(()=>{
       setActive(data && data.user && data.user.testimonials[0]);
-      console.log(active)
     },[fData[0]])
     
   const [active, setActive] = useState();

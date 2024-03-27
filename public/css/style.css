@@ -1514,6 +1514,58 @@ h6 {
   display:flex;
   gap:30px
 }
+.tonni_tm_portfolio .filters{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:55%;
+  margin:0px auto;
+  gap:10%;
+}
+.tonni_tm_portfolio .filters .filters_title{
+  font-size:1.5rem;
+}
+.tonni_tm_portfolio .filters .filters_list{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap:40px;
+  list-style-type: none;
+}
+.tonni_tm_portfolio .filters .filters_list li{
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  align-items: center;
+  width:max-content;
+  gap:5px;
+  border: solid black;
+  border-radius: 10px;
+  border-width: thin;
+  border-color: var(--extra-color);
+  height: fit-content;
+}
+.tonni_tm_portfolio .filters .filters_list li .list_name{
+  padding-left:10px;
+  padding-right:10px;
+}
+.tonni_tm_portfolio .filters .filters_list li .filters_list_cancel{
+  height:15px;
+  width:25px;
+}
+.tonni_tm_portfolio .filters .filters_list .active{
+  background-color: #ab5429;
+  color:white;
+}
+.tonni_tm_portfolio .filters .filters_title{
+  display: flex;
+  width: max-content
+}
+.tonni_tm_portfolio .filters .filters_title .filters_img{
+  height: 20px;
+  margin: auto 0;
+}
 
 /*---------------------------------------------------*/
 /*	08) TONNI TIMELINE
@@ -3848,5 +3900,19 @@ h6 {
     margin-left: 80%;
     display: flex;
     gap: 10px;
+  }
+  .tonni_tm_portfolio .filters{
+    flex-direction: column;
+    width:100%;
+    gap:2vh;
+
+  }
+  .tonni_tm_portfolio .filters .filters_title{
+    margin:0 auto;
+  }
+  .tonni_tm_portfolio .filters .filters_list{
+    gap:10px;
+    margin:0 auto;
+    flex-wrap: wrap;
   }
 }
